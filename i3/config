@@ -59,7 +59,7 @@ for_window [class="KeePassXC"] floating enable, resize set width 800 px height 6
 bindsym $mod+Shift+p exec keepassxc
 
 # start dmenu (a program launcher)
-bindsym $mod+space exec --no-startup-id dmenu_run -fn 'SpaceMono Nerd Font-12'
+bindsym $mod+space exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
