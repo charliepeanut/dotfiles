@@ -1,0 +1,40 @@
+general {
+    output_format = "i3bar"
+    colors = true
+    interval = 1
+}
+
+order += "memory"
+order += "cpu_usage"
+order += "cpu_temperature 0"
+order += "read_file gpu"
+order += "tztime local"
+order += "wireless _first_"
+
+wireless _first_ {
+    format_up = ""
+    format_down = "睊  no wifi"
+}
+
+memory {
+    format = "  %used / %total"
+}
+
+cpu_usage {
+    format = "  %usage"
+}
+
+cpu_temperature 0 {
+    format = " %degrees°C"
+    path = "/sys/class/hwmon/hwmon2/temp1_input"
+}
+
+# read_file gpu {
+#     path = "/home/charliepeanut/.local/bin/gpu-temp.sh"
+#     format = " %content°C"
+# }
+
+
+tztime local {
+    format = " %d/%m/%Y   %H:%M"
+}
